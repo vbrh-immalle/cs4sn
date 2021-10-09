@@ -6,13 +6,13 @@ namespace cs4sn
     {
         static void Main(string[] args)
         {
-            if( args.Length < 2 )
+            if( args.Length < 1 )
             {
                 printHelp();
                 return;
             }
 
-            if( args[1] == "hallo")
+            if( args[0] == "hallo")
             {
                 Console.Write("username: ");
                 string username = Console.ReadLine();
