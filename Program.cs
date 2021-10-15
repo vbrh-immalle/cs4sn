@@ -12,11 +12,13 @@ namespace cs4sn
                 return;
             }
 
-            if( args[0] == "hallo")
-            {
-                Console.Write("username: ");
-                string username = Console.ReadLine();
-                Console.WriteLine("Hallo {0}!", username);
+            switch(args[0]) {
+                case "hallo":
+                    runHallo();
+                    break;
+                default:
+                    Console.WriteLine($"Onbekend commando [{args[0]}].");
+                    break;
             }
         }
 
@@ -25,6 +27,12 @@ namespace cs4sn
             Console.WriteLine(@"
 cs4n hallo      vraag om een gebruikersnaam en zeg hallo terug
 ");
+        }
+
+        static void runHallo() {
+            Console.Write("username: ");
+            string username = Console.ReadLine();
+            Console.WriteLine("Hallo {0}!", username);
         }
 
     }
