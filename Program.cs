@@ -16,6 +16,9 @@ namespace cs4sn
                 case "hallo":
                     runHallo();
                     break;
+                case "console":
+                    runConsole();
+                    break;
                 default:
                     Console.WriteLine($"Onbekend commando [{args[0]}].");
                     break;
@@ -33,6 +36,18 @@ cs4n hallo      vraag om een gebruikersnaam en zeg hallo terug
             Console.Write("username: ");
             string username = Console.ReadLine();
             Console.WriteLine("Hallo {0}!", username);
+        }
+
+        static void runConsole() {
+            Console.WriteLine("De terminalgrootte is [{0}x{1}].",
+                Console.WindowWidth,
+                Console.WindowHeight);
+            Console.WriteLine("De achtergrondkleur is [{0}].",
+                Console.BackgroundColor);
+            Console.WriteLine("De voorgrondkleur (tekstkleur) is [{0}].",
+                Console.ForegroundColor);
+            
+            Console.WriteLine("Verander de grootte v.h. terminal-venster en run dit commando opnieuw.");
         }
 
     }
