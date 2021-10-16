@@ -28,7 +28,9 @@ namespace cs4sn
         static void printHelp()
         {
             Console.WriteLine(@"
-cs4n hallo      vraag om een gebruikersnaam en zeg hallo terug
+dotnet run              toon deze help-tekst
+dotnet run hallo        vraag om een gebruikersnaam en zeg hallo terug
+dotnet run console      toon statistieken over de huidige console
 ");
         }
 
